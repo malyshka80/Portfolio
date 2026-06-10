@@ -8,8 +8,8 @@ import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 import { Clone } from '@react-three/drei';
 
 // replace with your own imports, see the usage snippet for details
-const cardGLB = "/portfolio/public/assets/minecard.glb";
-const lanyard = "/portfolio/public/assets/lanyard.png";
+const cardGLB = "/assets/minecard.glb";
+const lanyard = "/assets/lanyard.png";
 
 import * as THREE from 'three';
 import './Lanyard.css';
