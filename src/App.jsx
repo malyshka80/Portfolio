@@ -120,7 +120,7 @@ function App() {
                 </h2>
 
                 <BlurText
-                  text="I’m Issra Chaabeni , a full-stack developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 20 completed projects, I’m committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products."
+                  text="I’m Issra Chaabeni , a full-stack developer passionate about building modern, high-performance applications with an intuitive user experience. I enjoy working with the latest technologies like Artificial Intelligence, Machine Learning, and cloud-based development, blending creativity with precision to deliver impactful solutions. With over three years of experience and more than 3 completed projects, I’m committed to helping users and businesses grow in the digital era through functional, aesthetic, and scalable digital products."
                   delay={150}
                   animateBy="words"
                   direction="top"
@@ -206,7 +206,7 @@ function App() {
           <div style={{ height: 'auto', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" >
             <ChromaGrid
               items={listProyek}
-              onItemClick={handleProjectClick} // Kirim fungsi untuk handle klik
+              onItemClick={handleProjectClick} // Pass a function to handle clicks
               radius={500}
               damping={0.45}
               fadeOut={0.6}
