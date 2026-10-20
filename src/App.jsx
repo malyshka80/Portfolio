@@ -6,10 +6,12 @@ import ScrambledText from "./components/ScrambledText/ScrambledText";
 import SplitText from "./components/SplitText/SplitText";
 import Lanyard from "./components/Lanyard/Lanyard";
 import GlassIcons from "./components/GlassIcons/GlassIcons";
-import { listTools, listProyek } from "./data";
+import { listTools, listProjects } from "./data";
 import ChromaGrid from "./components/ChromaGrid/ChromaGrid";
 import ProjectModal from "./components/ProjectModal/ProjectModal"; // <-- IMPORT MODAL
 import Aurora from "./components/Aurora/Aurora";
+
+const assetUrl = (path) => `${import.meta.env.BASE_URL}assets/${path}`;
 //import AOS from 'aos';
 //import ChatRoom from "./components/ChatRoom";
 //import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -66,7 +68,7 @@ function App() {
         <div className="hero grid md:grid-cols-2 items-center pt-10 xl:gap-0 gap-6 grid-cols-1">
           <div className="animate__animated animate__fadeInUp animate__delay-3s">
             <div className="flex items-center gap-3 mb-6 bg bg-zinc-800 w-fit p-4 rounded-2xl">
-              <img src="./assets/Me.jpg" className="w-10 rounded-md" />
+              <img src={assetUrl("Me.jpg")} alt="Issra Chaabeni" className="w-10 rounded-md" />
               <q>Avoid or just undertake it</q>
             </div>
             <h1 className="text-5xl font-bold mb-6">
@@ -81,7 +83,7 @@ function App() {
             />
             <div className="flex items-center sm:gap-4 gap-2">
               <a 
-                href="./assets/CV.pdf" 
+                href={assetUrl("Issra_Chaabeni_CV_Resume.pdf")}
                 download="Issra_Chaabeni_CV.pdf" 
                 className="font-semibold bg-[#1a1a1a] p-4 px-6 rounded-full border border-gray-700 hover:bg-[#222] transition-colors"
               >
@@ -101,7 +103,7 @@ function App() {
               handle="issrachaabeni"
               status="Online"
               contactText="Contact Me"
-              avatarUrl="./assets/aya.jpeg"
+              avatarUrl={assetUrl("aya.jpeg")}
               showUserInfo={true}
               enableTilt={true}
               enableMobileTilt={false}
@@ -130,21 +132,21 @@ function App() {
                 <div className="flex flex-col sm:flex-row items-center sm:justify-between text-center sm:text-left gap-y-8 sm:gap-y-0 mb-4 w-full">
                   <div>
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      20<span className="text-violet-500">+</span>
+                      3<span className="text-violet-500">+</span>
                     </h1>
                     <p>Project Finished</p>
                   </div>
                   <div>
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      3<span className="text-violet-500">+</span>
+                      3<span className="text-violet-500"></span>
                     </h1>
                     <p>Years of Experience</p>
                   </div>
                   <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-once="true">
                     <h1 className="text-3xl md:text-4xl mb-1">
-                      3.81<span className="text-violet-500">/4.00</span>
+                      <span className="text-violet-500"></span>
                     </h1>
-                    <p>GPA</p>
+                    <p></p>
                   </div>
                 </div>
 
@@ -176,20 +178,20 @@ function App() {
                 className="flex items-center gap-4 p-4 border border-zinc-700 rounded-xl bg-zinc-900/60 backdrop-blur-md hover:bg-zinc-800/80 transition-all duration-300 group shadow-lg"
               >
                 <img
-                  src={tool.gambar}
-                  alt="Tools Image"
+                  src={tool.image}
+                  alt={tool.name}
                   className="w-16 h-16 object-contain bg-zinc-800 p-2 rounded-lg group-hover:bg-zinc-900 transition-all duration-300"
                 />
                 <div className="flex flex-col overflow-hidden">
                   <div className="truncate">
                     <ShinyText
-                      text={tool.nama}
+                      text={tool.name}
                       disabled={false}
                       speed={3}
                       className="text-lg font-semibold block"
                     />
                   </div>
-                  <p className="text-sm text-zinc-400 truncate">{tool.ket}</p>
+                  <p className="text-sm text-zinc-400 truncate">{tool.is}</p>
                 </div>
               </div>
             ))}
@@ -205,7 +207,7 @@ function App() {
 
           <div style={{ height: 'auto', position: 'relative' }} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-once="true" >
             <ChromaGrid
-              items={listProyek}
+              items={listProjects}
               onItemClick={handleProjectClick} // Pass a function to handle clicks
               radius={500}
               damping={0.45}

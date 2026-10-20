@@ -1,4 +1,5 @@
-import HeroImage from "/assets/hero-img.webp";
+const assetUrl = (path) => `${import.meta.env.BASE_URL}assets/${path}`;
+const HeroImage = assetUrl("hero-img.webp");
 
 const Image = {
   HeroImage,
@@ -6,21 +7,21 @@ const Image = {
 
 export default Image;
 
-import Tools1 from "/assets/tools/vscode.png";
-import Tools2 from "/assets/tools/reactjs.png";
-import Tools3 from "/assets/tools/nextjs.png";
-import Tools4 from "/assets/tools/tailwind.png";
-import Tools6 from "/assets/tools/js.png";
-import Tools7 from "/assets/tools/nodejs.png";
-import Tools8 from "/assets/tools/github.png";
-import Tools9 from "/assets/tools/ai.png";
-import Tools10 from "/assets/tools/canva.png";
-import Tools11 from "/assets/tools/figma.png";
-import Tools13 from "/assets/tools/firebase.png";
-import Tools14 from "/assets/tools/html.png";
-import Tools15 from "/assets/tools/css.png";
-import Tools18 from "/assets/tools/vite.png";
-import Tools19 from "/assets/tools/mysql.png";
+const Tools1 = assetUrl("tools/vscode.png");
+const Tools2 = assetUrl("tools/reactjs.png");
+const Tools3 = assetUrl("tools/nextjs.png");
+const Tools4 = assetUrl("tools/tailwind.png");
+const Tools6 = assetUrl("tools/js.png");
+const Tools7 = assetUrl("tools/nodejs.png");
+const Tools8 = assetUrl("tools/github.png");
+const Tools9 = assetUrl("tools/ai.png");
+const Tools10 = assetUrl("tools/canva.png");
+const Tools11 = assetUrl("tools/figma.png");
+const Tools13 = assetUrl("tools/firebase.png");
+const Tools14 = assetUrl("tools/html.png");
+const Tools15 = assetUrl("tools/css.png");
+const Tools18 = assetUrl("tools/vite.png");
+const Tools19 = assetUrl("tools/mysql.png");
 
 
 export const listTools = [
@@ -134,18 +135,17 @@ export const listTools = [
   },
 ];
 
-import Project1 from "/assets/projects/project1.jpg";
-import Proyek2 from "/assets/projects/project2.jpg";
-import Proyek3 from "/assets/projects/project3.jpg";
+const Project1 = assetUrl("projects/project1.png");
+const Project2 = assetUrl("projects/project2.png");
+const Project3 = assetUrl("projects/project3.png");
 
-
-export const listProyek = [
+export const listProjects = [
   {
     id: 1,
     image: Project1,
     title: "Personal Web Portfolio ",
     subtitle: "A professional website showcasing the developer's projects, technical skills, and background in one accessible place.",
-    fullDescription:"A personal portfolio website created to establish a professional online presence and showcase projects, technical skills, and development experience. The website serves as a central place for visitors, recruiters, and potential collaborators to discover the developer's work and learn more about their background.Designed to present information in a clear and accessible way, the portfolio helps communicate technical abilities, highlight selected projects, and make it easier for visitors to connect with the developer. It also provides a foundation for continuously showcasing new projects and professional achievements."
+    fullDescription:"A personal portfolio website created to establish a professional online presence and showcase projects, technical skills, and development experience. The website serves as a central place for visitors, recruiters, and potential collaborators to discover the developer's work and learn more about their background.Designed to present information in a clear and accessible way, the portfolio helps communicate technical abilities, highlight selected projects, and make it easier for visitors to connect with the developer. It also provides a foundation for continuously showcasing new projects and professional achievements.",
     borderColor: "#3B82F6",
     gradient: "linear-gradient(145deg, #3B82F6, #000)",
     url: "https://github.com/malyshka80/Portfolio",
@@ -156,7 +156,7 @@ export const listProyek = [
     image: Project2,
     title: "Finance Management Web App",
     subtitle: "A personal finance platform for tracking income and expenses, organizing budgets, and monitoring financial activity.",
-    fullDescription:"A personal finance management web application designed to help users organize their finances, track income and expenses, and gain a clearer understanding of their spending habits. The platform provides a centralized space for managing financial activity, monitoring budgets, and making more informed everyday financial decisions. Its goal is to make personal money management more accessible, structured, and intuitive through a user-friendly digital experience."
+    fullDescription:"A personal finance management web application designed to help users organize their finances, track income and expenses, and gain a clearer understanding of their spending habits. The platform provides a centralized space for managing financial activity, monitoring budgets, and making more informed everyday financial decisions. Its goal is to make personal money management more accessible, structured, and intuitive through a user-friendly digital experience.",
     borderColor: "#10B981",
     gradient: "linear-gradient(180deg, #10B981, #000)",
     url: "https://github.com/malyshka80/Finance-Web-App",
